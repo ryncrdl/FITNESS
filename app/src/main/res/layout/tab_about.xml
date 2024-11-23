@@ -1,404 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#000000">
 
     <LinearLayout
-        android:name="tab_about"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp">
+        android:orientation="vertical">
 
-        <!--android:background="#E0E0FF" -->
-        <androidx.cardview.widget.CardView
-            style="@style/CardViewStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <!-- App Name -->
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:text="@string/app_name" />
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:text="@string/app_version" />
-
-                </LinearLayout>
-
-                <!-- Database Version -->
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:text="@string/database_version_label" />
-
-                    <TextView
-                        android:id="@+id/database_version"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:text="1" />
-
-                </LinearLayout>
-
-                <!-- Author Name -->
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:text="@string/copyright" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="50"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:text="@string/license" />
-
-                    <TextView
-                        android:id="@+id/FastNFitness"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:autoLink="web"
-                        android:linksClickable="false"
-                        android:text="@string/bsd3"
-                        android:textColor="#ff008577" />
-
-                </LinearLayout>
-
-                <!-- Github url -->
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:text="A bug or an enhancement request?" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:autoLink="web"
-                        android:text="@string/opensource_url"
-                        android:textIsSelectable="true" />
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:text="@string/email_label" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:autoLink="email"
-                        android:text="@string/email_url"
-                        android:textIsSelectable="true" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <!-- Revision Name -->
-
-
-        <androidx.cardview.widget.CardView
-            style="@style/CardViewStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/revision_history_label" />
-
-                <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:text="@string/revision_history" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/thanks_label" />
-
-
+        <!-- Header -->
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
-            <androidx.cardview.widget.CardView
-                style="@style/CardViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-                <TextView
-                    android:id="@+id/MPAndroidChart"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:text="@string/MPAndroidChart_content" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                style="@style/CardViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/javaCSV"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:text="@string/javaCSV_content" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                style="@style/CardViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/antoniomChronometer"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:text="@string/antoniomChronometer_content" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                style="@style/CardViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/LicensesDialog"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:text="@string/LicensesDialog_content" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                style="@style/CardViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/MaterialIntro"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:text="@string/MaterialIntro_content" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                style="@style/CardViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/TimePickerWithSeconds"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:text="@string/TimePickerWithSeconds_content" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                style="@style/CardViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/SmartTabLayout"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:text="@string/SmartTabLayout_content" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                style="@style/CardViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/flaticonCredits"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:text="@string/flaticon_content" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                style="@style/CardViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/freepikCredits"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:text="@string/freepik_content" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                style="@style/CardViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/CircleProgress"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:text="@string/circleprogress_content" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                style="@style/CardViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/CircularImageView"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:text="@string/circularImageView_content" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                style="@style/CardViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/ktoast"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:text="@string/ktoast_content" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                style="@style/CardViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/SweetAlertDialog"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:text="@string/SweetAlertDialog_content" />
-
-            </androidx.cardview.widget.CardView>
-
-            <!--<androidx.cardview.widget.CardView
-                style="@style/CardViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/AndroidImageCropper"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:text="@string/AndroidImageCropper_content" />
-
-                <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:text="@string/AndroidImageCropper_content" />
-
-            </androidx.cardview.widget.CardView>
-        -->
-            <androidx.cardview.widget.CardView
-                style="@style/CardViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/MaterialFavoriteButton"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:text="@string/MaterialFavoriteButton_content" />
-
-            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/well_gym_logo"
+                android:contentDescription="This is Logo" />
 
         </LinearLayout>
 
-    </LinearLayout>
+        <!-- Form -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp">
 
+            <!-- Gender -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spinner_gender"
+                android:layout_width="match_parent"
+                android:theme="@style/CardView.Light"
+                android:padding="5dp"
+                android:entries="@array/gender_array"
+                android:layout_height="wrap_content" />
+
+            <!-- Age -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edit_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:background="@drawable/custom_input"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:hint="Enter your age" />
+
+            <!-- Current Weight -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Weight"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edit_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:background="@drawable/custom_input"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:hint="Enter your weight" />
+
+            <!-- Height -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Height"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edit_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:background="@drawable/custom_input"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:hint="Enter your height" />
+
+            <!-- Activity Level -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activity Level"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spinner_activity_level"
+                android:layout_width="match_parent"
+                android:theme="@style/CardView.Light"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:entries="@array/activity_level_array"
+                android:layout_height="wrap_content" />
+
+            <!-- Weight to Lose -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight To Lose"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edit_weight_to_lose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:background="@drawable/custom_input"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:hint="Enter weight to lose" />
+
+            <!-- Muscle Gain Days -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Muscle Gain Days"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edit_muscle_gain_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_input"
+                android:padding="5dp"
+                android:inputType="number"
+                android:textColor="#000"
+                android:hint="Enter days" />
+
+            <!-- Body Fat Percentage -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Body Fat Percentage"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edit_body_fat_percentage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:background="@drawable/custom_input"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:hint="Enter your body fat percentage" />
+
+            <!-- Protein Intake -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Protein Intake"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edit_protein_intake"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:background="@drawable/custom_input"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:hint="Enter your protein intake" />
+
+            <!-- Time Available -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time Available"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edit_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:background="@drawable/custom_input"
+                android:padding="5dp"
+                android:textColor="#000"
+                android:hint="Enter days available" />
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/btn_generate_forecast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Generate Forecast"
+                android:backgroundTint="#007bff"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/tv_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Results will appear here"
+                android:layout_marginTop="16dp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
 </ScrollView>

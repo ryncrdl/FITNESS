@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".views.LoginActivity"
+    >
+
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="50dp"
+        android:background="@drawable/well_gym_logo"
+        android:textStyle="bold"
+        android:contentDescription="@string/app_name" />
+
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/icon"
+        android:background="@drawable/custom_input"
+        android:hint="Username"
+        android:drawableEnd="@drawable/username"
+        android:drawablePadding="12dp"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="50dp"
+        />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:background="@drawable/custom_input"
+        android:hint="Password"
+        android:drawableEnd="@drawable/passwordicon"
+        android:drawablePadding="12dp"
+        android:inputType="textPassword"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginVertical="10dp"
+        android:padding="15dp"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_below="@+id/password"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/bg"
+        android:text="Login"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/registerButton"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginButton"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Don't have an account?"
+        android:textColor="#80000000"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+</RelativeLayout>

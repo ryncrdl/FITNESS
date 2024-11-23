@@ -125,7 +125,7 @@
     <string name="profil_select_profil_to_delete">Select a profile to delete</string>
 
     <!-- About Fragment  -->
-    <string name="AboutLabel">About</string>
+    <string name="AboutLabel">Forecasting</string>
 
     <!-- Navigation Drawer -->
     <string name="drawer_open">Open navigation drawer</string>
@@ -463,4 +463,23 @@
     <string name="older_image">older</string>
     <string name="import_unknow_file_extensions">Unknown file extension can\'t import</string>
     <string name="ProgramListLabel">Program List</string>
+    <string name="r_fitness_gym">R Fitness Gym</string>
+
+    <string name="time_set">Set time</string>
+    <string name="cancel">Cancel</string>
+    <string name="time">Time : </string>
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="activity_level_array">
+        <item>Sedentary (Less than 30 minutes of exercise per week)</item>
+        <item>Lightly Active (Light exercise or sports 1-3 days a week)</item>
+        <item>Moderately Active (Moderate exercise or sports 3-5 days a week)</item>
+        <item>Very Active (Hard exercise or sports 6-7 days a week)</item>
+        <item>Extremely Active (Very hard exercise or sports and a physical job)</item>
+    </string-array>
+
 </resources>

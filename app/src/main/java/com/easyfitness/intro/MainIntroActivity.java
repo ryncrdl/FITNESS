@@ -2,9 +2,11 @@ package com.easyfitness.intro;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.easyfitness.DAO.DAOProfile;
 import com.easyfitness.R;
+import com.easyfitness.views.LoginActivity;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 import com.heinrichreimersoftware.materialintro.slide.SimpleSlide;
@@ -78,7 +80,6 @@ public class MainIntroActivity extends IntroActivity {
                 .image(R.drawable.group_hi_res_512)
                 .background(R.color.launcher_background)
                 .backgroundDark(R.color.launcher_background)
-                .scrollable(true)
                 .build());
 
 /*
@@ -100,7 +101,7 @@ public class MainIntroActivity extends IntroActivity {
         }
 */
 
-        // Initialisation des objets DB
+//         Initialisation des objets DB
         DAOProfile mDbProfils = new DAOProfile(this.getApplicationContext());
 
         // Pour la base de donnee profil, il faut toujours qu'il y ai au moins un profil
@@ -113,5 +114,9 @@ public class MainIntroActivity extends IntroActivity {
                     .build();
             addSlide(profileSlide);
         }
+
+
     }
+
+
 }

@@ -67,7 +67,7 @@ import com.easyfitness.utils.ImageUtil;
 import com.easyfitness.utils.Keyboard;
 import com.easyfitness.utils.UnitConverter;
 import com.easyfitness.views.WorkoutValuesInputView;
-import com.ikovac.timepickerwithseconds.MyTimePickerDialog;
+import com.ikovac.timepickerwithseconds.view.MyTimePickerDialog;
 import com.mikhaellopez.circularimageview.CircularImageView;
 import com.onurkaganaldemir.ktoastlib.KToast;
 

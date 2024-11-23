@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
@@ -23,16 +25,16 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/well_gym_logo"
+        android:label="Well Gym"
         android:requestLegacyExternalStorage="true"
         android:theme="@style/AppTheme"
         android:preserveLegacyExternalStorage="true"> <!--for when requestLegacyExternalStorage will be removed-->
 
         <activity
-            android:name=".MainActivity"
+            android:name=".views.LoginActivity"
             android:configChanges="orientation|screenSize"
-            android:label="@string/app_name"
+            android:label="Well Gym"
             android:windowSoftInputMode="stateUnchanged">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,8 +43,29 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.Intro" />
+        <activity
             android:name=".intro.MainIntroActivity"
             android:theme="@style/Theme.Intro" />
+        <activity
+            android:name=".intro.NewProfileFragment"
+            android:theme="@style/Theme.Intro" />
+
+        <!--        <activity-->
+<!--            android:name=".intro.MainIntroActivity"-->
+<!--            android:theme="@style/Theme.Intro" />-->
+
+<!--        <activity-->
+<!--            android:name=".views.LoginActivity"-->
+<!--            android:theme="@style/Theme.Intro" />-->
+<!--        <activity-->
+<!--            android:name=".MainActivity"-->
+<!--            android:theme="@style/Theme.Intro" />-->
+        <activity
+            android:name=".views.RegistrationActivity"
+            android:theme="@style/Theme.Intro" />
+
         <activity
             android:name="com.canhub.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />

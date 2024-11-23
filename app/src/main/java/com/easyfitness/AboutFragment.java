@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,6 +24,7 @@ import de.psdev.licensesdialog.licenses.License;
 import de.psdev.licensesdialog.licenses.MITLicense;
 import de.psdev.licensesdialog.model.Notice;
 
+
 public class AboutFragment extends Fragment {
     private String name;
     private int id;
@@ -33,110 +37,9 @@ public class AboutFragment extends Fragment {
         String copyright = null;
         License license = null;
 
-        switch (v.getId()) {
-            case R.id.FastNFitness:
-                name = "FastNFitness";
-                url = "https://github.com/brodeurlv/fastnfitness";
-                copyright = "Copyright(c) 2021 - Charles Combes - All rights reserved";
-                license = new BSD3ClauseLicense();
-                break;
-            case R.id.MPAndroidChart:
-                name = "MPAndroidChart";
-                url = "https://github.com/PhilJay/MPAndroidChart";
-                copyright = "Copyright 2019 Philipp Jahoda";
-                license = new ApacheSoftwareLicense20();
-                break;
-            case R.id.javaCSV:
-                name = "JavaCSV";
-                url = "https://sourceforge.net/projects/javacsv/";
-                copyright = "";
-                license = new GnuLesserGeneralPublicLicense21();
-                break;
-            case R.id.antoniomChronometer:
-                name = "Millisecond-Chronometer";
-                url = "https://github.com/antoniom/Millisecond-Chronometer";
-                copyright = "";
-                license = new ApacheSoftwareLicense20();
-                break;
-            case R.id.LicensesDialog:
-                name = "LicensesDialog";
-                url = "https://github.com/PSDev/LicensesDialog";
-                copyright = "Copyright 2013 Philip Schiffer";
-                license = new ApacheSoftwareLicense20();
-                break;
-            case R.id.MaterialIntro:
-                name = "Material-Intro";
-                url = "https://github.com/heinrichreimer/material-intro";
-                copyright = "Copyright (c) 2017 Jan Heinrich Reimer";
-                license = new MITLicense();
-                break;
-            case R.id.TimePickerWithSeconds:
-                name = "TimePickerWithSeconds";
-                url = "https://github.com/IvanKovac/TimePickerWithSeconds";
-                copyright = "Copyright (c) 2017 Ivan Kovac";
-                license = new CustomLicense("WTFPL License", "http://www.wtfpl.net/txt/copying/");
-                break;
-            case R.id.SmartTabLayout:
-                name = "SmartTabLayout";
-                url = "https://github.com/ogaclejapan/SmartTabLayout";
-                copyright = "Copyright (C) 2015 ogaclejapan";
-                license = new ApacheSoftwareLicense20();
-                break;
-            case R.id.flaticonCredits:
-                name = "Flaticon";
-                url = "https://www.flaticon.com";
-                copyright = "Copyright © 2013-2019 Freepik Company S.L.";
-                license = new CustomLicense("Free License (with attribution)", "https://profile.flaticon.com/license/free");
-                break;
-            case R.id.freepikCredits:
-                name = "Freepik";
-                url = "https://www.freepik.com";
-                copyright = "Copyright © 2010-2019 Freepik Company S.L.";
-                license = new CustomLicense("Free License (with attribution)", "https://profile.freepik.com/license/free");
-                break;
-            case R.id.CircleProgress:
-                name = "CircleProgress";
-                url = "https://github.com/lzyzsd/CircleProgress";
-                copyright = "Copyright (C) 2014 Bruce Lee <bruceinpeking#gmail.com>";
-                license = new CustomLicense("WTFPL License", "http://www.wtfpl.net/txt/copying/");
-                break;
-            case R.id.CircularImageView:
-                name = "CircularImageView";
-                url = "https://github.com/lopspower/CircularImageView";
-                copyright = "Lopez Mikhael";
-                license = new ApacheSoftwareLicense20();
-                break;
-            case R.id.ktoast:
-                name = "KToast";
-                url = "https://github.com/onurkagan/KToast";
-                copyright = "";
-                license = new ApacheSoftwareLicense20();
-                break;
-            case R.id.SweetAlertDialog:
-                name = "SweetAlertDialog";
-                url = "https://github.com/F0RIS/sweet-alert-dialog";
-                copyright = "Pedant (http://pedant.cn)";
-                license = new MITLicense();
-                break;
-            /*case R.id.AndroidImageCropper:
-                name = "Android-Image-Cropper";
-                url = "https://github.com/ArthurHub/Android-Image-Cropper";
-                copyright = "Copyright 2016, Arthur Teplitzki, 2013, Edmodo, Inc.";
-                license = new ApacheSoftwareLicense20();
-                break;*/
-            case R.id.MaterialFavoriteButton:
-                name = "Material Favorite Button";
-                url = "https://github.com/IvBaranov/MaterialFavoriteButton";
-                copyright = "Copyright 2015 Ivan Baranov";
-                license = new ApacheSoftwareLicense20();
-                break;
-        }
 
-        final Notice notice = new Notice(name, url, copyright, license);
-        new LicensesDialog.Builder(getMainActivity())
-                .setNotices(notice)
-                .build()
-                .show();
+
+
     };
 
     /**
@@ -167,43 +70,82 @@ public class AboutFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.tab_about, container, false);
 
-        TextView mpDBVersionTextView = view.findViewById(R.id.database_version);
-        mpDBVersionTextView.setText(Integer.toString(DatabaseHelper.DATABASE_VERSION));
+        Spinner spinnerGender = view.findViewById(R.id.spinner_gender);
+        EditText etAge = view.findViewById(R.id.edit_age);
+        EditText etWeight = view.findViewById(R.id.edit_weight);
+        EditText etHeight = view.findViewById(R.id.edit_height);
+        Spinner spinnerActivityLevel = view.findViewById(R.id.spinner_activity_level);
+        EditText etWeightToLose = view.findViewById(R.id.edit_weight_to_lose);
+        EditText etDays = view.findViewById(R.id.edit_days);
+        EditText etProteinIntake = view.findViewById(R.id.edit_protein_intake);
+        Button btnCalculate = view.findViewById(R.id.btn_generate_forecast);
+        TextView tvResults = view.findViewById(R.id.tv_results);
 
-        TextView mpMPAndroidChartTextView = view.findViewById(R.id.MPAndroidChart);
-        TextView mpJavaCVSTextView = view.findViewById(R.id.javaCSV);
-        TextView mpLicenseDialogTextView = view.findViewById(R.id.LicensesDialog);
-        TextView mpChronometerTextView = view.findViewById(R.id.antoniomChronometer);
-        TextView mpMaterialIntroTextView = view.findViewById(R.id.MaterialIntro);
-        TextView mpTimePickerWithSecondsTextView = view.findViewById(R.id.TimePickerWithSeconds);
-        TextView mpSmartTabLayoutTextView = view.findViewById(R.id.SmartTabLayout);
-        TextView mpFlaticonTextView = view.findViewById(R.id.flaticonCredits);
-        TextView mpFreepikView = view.findViewById(R.id.freepikCredits);
-        TextView mpCircleProgressView = view.findViewById(R.id.CircleProgress);
-        TextView mpCircularImageView = view.findViewById(R.id.CircularImageView);
-        TextView mpkToast = view.findViewById(R.id.ktoast);
-        TextView mpSweetAlertDialog = view.findViewById(R.id.SweetAlertDialog);
-        TextView mpMaterialFavoriteButton = view.findViewById(R.id.MaterialFavoriteButton);
-        TextView mpFastNFitnesss = view.findViewById(R.id.FastNFitness);
+        btnCalculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    // Get input values
+                    String gender = spinnerGender.getSelectedItem().toString();
+                    int age = Integer.parseInt(etAge.getText().toString());
+                    double weight = Double.parseDouble(etWeight.getText().toString());
+                    int height = Integer.parseInt(etHeight.getText().toString());
+                    String activityLevel = spinnerActivityLevel.getSelectedItem().toString();
+                    double weightToLose = Double.parseDouble(etWeightToLose.getText().toString());
+                    int days = Integer.parseInt(etDays.getText().toString());
+                    int proteinIntake = Integer.parseInt(etProteinIntake.getText().toString());
 
+                    // Calculate BMR
+                    double bmr = gender.equalsIgnoreCase("Male")
+                            ? (10 * weight) + (6.25 * height) - (5 * age) + 5
+                            : (10 * weight) + (6.25 * height) - (5 * age) - 161;
 
-        mpMPAndroidChartTextView.setOnClickListener(clickLicense);
-        mpJavaCVSTextView.setOnClickListener(clickLicense);
-        mpLicenseDialogTextView.setOnClickListener(clickLicense);
-        mpChronometerTextView.setOnClickListener(clickLicense);
-        mpMaterialIntroTextView.setOnClickListener(clickLicense);
-        mpTimePickerWithSecondsTextView.setOnClickListener(clickLicense);
-        mpSmartTabLayoutTextView.setOnClickListener(clickLicense);
-        mpFlaticonTextView.setOnClickListener(clickLicense);
-        mpFreepikView.setOnClickListener(clickLicense);
-        mpCircleProgressView.setOnClickListener(clickLicense);
-        mpCircularImageView.setOnClickListener(clickLicense);
-        mpkToast.setOnClickListener(clickLicense);
-        mpSweetAlertDialog.setOnClickListener(clickLicense);
-        mpMaterialFavoriteButton.setOnClickListener(clickLicense);
-        mpFastNFitnesss.setOnClickListener(clickLicense);
+                    // Activity level multiplier
+                    double pal;
+                    switch (activityLevel) {
+                        case "Lightly Active":
+                            pal = 1.375;
+                            break;
+                        case "Moderately Active":
+                            pal = 1.55;
+                            break;
+                        case "Very Active":
+                            pal = 1.725;
+                            break;
+                        case "Extremely Active":
+                            pal = 1.9;
+                            break;
+                        default:
+                            pal = 1.2; // Sedentary
+                            break;
+                    }
 
-        // Inflate the layout for this fragment
+                    double dailyCalorieNeeds = bmr * pal;
+                    double weeklyCalorieNeeds = dailyCalorieNeeds * 7;
+                    double weightLossRate = weightToLose / days;
+
+                    // Generate health tips
+                    String healthTip;
+                    if (weightLossRate > 0.5) {
+                        healthTip = "Rapid weight loss can be harmful to your health.";
+                    } else if (weightLossRate < 0.1) {
+                        healthTip = "Your weight loss rate is slow but steady.";
+                    } else {
+                        healthTip = "Your weight loss rate seems reasonable.";
+                    }
+
+                    // Display results
+                    String results = String.format(
+                            "Daily Calorie Needs: %.2f\nWeekly Calorie Needs: %.2f\nWeight Loss Rate: %.2f kg/day\nHealth Tip:\n%s",
+                            dailyCalorieNeeds, weeklyCalorieNeeds, weightLossRate, healthTip);
+                    tvResults.setText(results);
+
+                } catch (Exception e) {
+                    tvResults.setText("Please fill out all fields correctly.");
+                }
+            }
+        });
+
         return view;
     }
 

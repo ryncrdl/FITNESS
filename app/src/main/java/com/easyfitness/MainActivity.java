@@ -2,6 +2,7 @@ package com.easyfitness;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -316,7 +317,7 @@ public class MainActivity extends AppCompatActivity {
         dataList.add(new DrawerItem(this.getResources().getString(R.string.bodytracking), R.drawable.ic_ruler, true));
         dataList.add(new DrawerItem(this.getResources().getString(R.string.progress_images), R.drawable.ic_photo_camera, true));
         dataList.add(new DrawerItem(this.getResources().getString(R.string.SettingLabel), R.drawable.ic_settings, true));
-        dataList.add(new DrawerItem(this.getResources().getString(R.string.AboutLabel), R.drawable.ic_info_outline, true));
+        dataList.add(new DrawerItem(this.getResources().getString(R.string.AboutLabel), R.drawable.baseline_auto_graph_24, true));
 
         mDrawerAdapter = new CustomDrawerAdapter(this, R.layout.custom_drawer_item,
                 dataList);
@@ -639,6 +640,13 @@ public class MainActivity extends AppCompatActivity {
 
                 // Si oui, supprimer la base de donnee et refaire un Start.
                 deleteDbBuilder.setPositiveButton(getActivity().getResources().getText(R.string.global_yes), (dialog, which) -> {
+                    //Set logout true
+
+                    SharedPreferences sharedPreferences = getSharedPreferences("user_data", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putBoolean("isLoggedIn", false);
+                    editor.apply();
+
                     List<Profile> lList = mDbProfils.getAllProfiles(mDbProfils.getReadableDatabase());
                     for (int i = 0; i < lList.size(); i++) {
                         Profile mTempProfile = lList.get(i);
@@ -681,11 +689,11 @@ public class MainActivity extends AppCompatActivity {
                 deleteDbDialog.show();
 
                 return true;
-            case R.id.action_apropos:
-                // Display the fragment as the main content.
-                showFragment(ABOUT);
-                //getAboutFragment().setHasOptionsMenu(true);
-                return true;
+//            case R.id.action_apropos:
+//                // Display the fragment as the main content.
+//                showFragment(ABOUT);
+//                //getAboutFragment().setHasOptionsMenu(true);
+//                return true;
             //case android.R.id.home:
             //onBackPressed();
             //	return true;
